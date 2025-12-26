@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Airline Section</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:system-ui;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh}
+.box{background:#020617;padding:28px;border-radius:20px;width:380px}
+input,button{width:100%;padding:12px;margin-bottom:12px;border-radius:12px;border:none}
+input{background:#020617;color:#fff;border:1px solid #1e293b}
+button{background:#2563eb;color:#fff;font-weight:600;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="box">
+<h2 id="title">Airline Setup</h2>
+<input placeholder="Airline Name (for custom)" id="name">
+<input placeholder="Primary Color (#007AFF)" id="color">
+<button onclick="next()">Continue</button>
+</div>
+<script>
+const a=localStorage.getItem('airline')||'custom';
+document.getElementById('title').innerText=a.toUpperCase()+' Airline';
+if(a!=='custom'){document.getElementById('name').style.display='none'}
+function next(){location.href='generator.html'}
+</script>
+</body>
+</html>

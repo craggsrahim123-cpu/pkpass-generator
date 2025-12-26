@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PKPass Generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:system-ui;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh}
+.box{background:#020617;padding:28px;border-radius:20px;width:360px}
+button{width:100%;padding:14px;margin-bottom:12px;border:none;border-radius:14px;font-size:1rem;color:white;font-weight:600;cursor:pointer}
+.pegasus{background:#f97316}.ajet{background:#ef4444}.ba{background:#1e3a8a}.klm{background:#0284c7}.custom{background:#16a34a}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>✈ PKPass Generator</h2>
+<button class="pegasus" onclick="go('pegasus')">Pegasus</button>
+<button class="ajet" onclick="go('ajet')">AJet</button>
+<button class="ba" onclick="go('ba')">British Airways</button>
+<button class="klm" onclick="go('klm')">KLM</button>
+<button class="custom" onclick="go('custom')">Custom Airline</button>
+</div>
+<script>
+function go(a){localStorage.setItem('airline',a);location.href='airline.html'}
+</script>
+</body>
+</html>

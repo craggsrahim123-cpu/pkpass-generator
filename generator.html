@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Boarding Pass</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:system-ui;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh}
+.box{background:#020617;padding:28px;border-radius:20px;width:380px}
+input,button{width:100%;padding:12px;margin-bottom:12px;border-radius:12px;border:none}
+input{background:#020617;color:#fff;border:1px solid #1e293b}
+button{background:#16a34a;color:#fff;font-weight:600;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="box">
+<h2 id="title">Boarding Pass</h2>
+<input placeholder="Route (LHR → DXB)">
+<input placeholder="Flight Number">
+<input placeholder="Gate">
+<input placeholder="Seat">
+<button>Create PKPass (next)</button>
+</div>
+<script>
+const a=localStorage.getItem('airline')||'custom';
+document.getElementById('title').innerText=a.toUpperCase()+' Boarding Pass';
+</script>
+</body>
+</html>
